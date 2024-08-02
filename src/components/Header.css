@@ -1,0 +1,28 @@
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+.panel-left-tooltip {
+    position: absolute;
+    top: 60px; /* 버튼 위에 표시되도록 조정 */
+    left: 65px;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.panel-left-tooltip::after {
+    border-top: 0px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid black;
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 15px;
+}
