@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Tooltip.css';
 
-const Tooltip = ({component: Component, toolTipText, callBackFunc, setStyle}) => {
+const MenuBox = ({component: Component, toolTipText, callBackFunc, setStyle}) => {
   const [showTooltip, setShowTooltip] = useState(false);
   return (
     <div className="tooltip-container" onClick={callBackFunc}>
@@ -19,4 +19,4 @@ const Tooltip = ({component: Component, toolTipText, callBackFunc, setStyle}) =>
   );
 };
 
-export default Tooltip;
+export default MenuBox;

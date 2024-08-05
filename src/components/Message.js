@@ -1,8 +1,13 @@
 import React from 'react'
 import { Bird, Volume2, Copy, RefreshCw, ThumbsDown, Sparkles } from 'lucide-react';
+import Tooltip from './Tooltip';
 
 const Message = ({context}) => {
-    // console.log({context});
+    const setComponentStyle = {width: '16px'}
+    const myFunc = () => {
+        alert('새 채팅 불러오는 이벤트');
+      }
+
     return (
         <div className='w-full'>
             <div className="flex justify-end my-4">
@@ -18,11 +23,11 @@ const Message = ({context}) => {
                 <div>
                     <span className='text-left'><p>{context.context.split("").reverse().join("")}</p></span>
                     <div className='flex gap-2 my-1 text-neutral-500'>
-                        <Volume2 className='w-4' />
-                        <Copy className='w-4' />
-                        <RefreshCw className='w-4' />
-                        <ThumbsDown className='w-4' />
-                        <Sparkles className='w-4' />
+                        <Tooltip component={Volume2} toolTipText="소리 듣기" callBackFunc={myFunc} setStyle={setComponentStyle}/>
+                        <Tooltip component={Copy} toolTipText="복사" callBackFunc={myFunc} setStyle={setComponentStyle}/>
+                        <Tooltip component={RefreshCw} toolTipText="응답 다시 생성하기" callBackFunc={myFunc} setStyle={setComponentStyle}/>
+                        <Tooltip component={ThumbsDown} toolTipText="별로인 응답" callBackFunc={myFunc} setStyle={setComponentStyle}/>
+                        <Tooltip component={Sparkles} toolTipText="모델 변경" callBackFunc={myFunc} setStyle={setComponentStyle}/>
                     </div>
                 </div>
             </div>

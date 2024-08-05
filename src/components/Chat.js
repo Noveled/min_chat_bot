@@ -10,8 +10,9 @@ const Chat = ({messages}) => {
                 {messages.length === 0
                 ?
                 <div className='flex flex-col w-full h-full justify-center items-center'>
-                    <Bird className='w-20 h-20 p-2 mb-8'/>
-                    <div className='flex gap-2'>
+                    <Bird className='text-neutral-600 w-20 h-20 p-2 mb-8'/>
+                    <div className='flex flex-wrap gap-2 justify-center'>
+                        <div className='flex gap-2'>
                         <div className='border rounded-2xl w-40 h-24 text-neutral-500 text-sm'>
                             <ShoppingBasket className='m-2 w-5'/>
                             <p className='m-2'>
@@ -24,6 +25,8 @@ const Chat = ({messages}) => {
                                 TikTok용 콘텐츠 캘린더
                             </p>
                         </div>
+                        </div>
+                        <div className='flex gap-2'>
                         <div className='border rounded-2xl w-40 h-24 text-neutral-500 text-sm'>
                             <GraduationCap className='m-2 w-5'/>
                             <p className='m-2'>
@@ -35,6 +38,7 @@ const Chat = ({messages}) => {
                             <p className='m-2'>
                                 로마 제국 토막 상식
                             </p>
+                        </div>
                         </div>
                     </div>
                 </div>
